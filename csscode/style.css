@@ -1,0 +1,92 @@
+.resume {
+  display: flex;
+  text-align: left;
+  justify-content: space-evenly;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #d9d9d927;
+  font-family: "Roboto Slab", serif;
+  color: #003049;
+  /* color: #353535; */
+  font-size: 1.5vw;
+}
+
+.resume {
+  height: 100%;
+  margin: 0 5%;
+  box-shadow: 1px 5px 20px -13px rgba(0, 0, 0, 0.1);
+}
+.resume .contactinfo {
+  padding: 15px;
+  box-shadow: 1px 5px 30px -13px rgba(56, 78, 119, 0.443);
+  width: 30%;
+}
+.resume .contactinfo .contactpiece {
+  margin: 10px 0;
+  color: #003049;
+  font-size: 1.5vw;
+}
+.resume .contactinfo .contactpiece a {
+  text-decoration: none;
+  color: #003049;
+}
+.resume .contactinfo .contactpiece a:hover {
+  color: #0687c7;
+}
+.resume .contactinfo button {
+  border: 2px solid #003049;
+  border-radius: 12px;
+  color: #384E77;
+}
+
+.resume-body {
+  padding: 15px;
+  color: #0D0630;
+  width: 70%;
+  min-width: 100px;
+}
+.resume-body .name {
+  padding: 10px;
+  border-bottom: 1px ridge #384E77;
+}
+.resume-body .position {
+  padding: 10px;
+  border-bottom: 7px dotted #384E77;
+}
+.resume-body .profile, .resume-body .education, .resume-body .social, .resume-body .experience, .resume-body .skillsets {
+  margin: 0 5%;
+}
+.resume-body p {
+  font-size: 1.5vw;
+  font-family: "Roboto Slab", sans-serif;
+}
+.resume-body h3 {
+  border-bottom: 3px groove #3C6E71;
+  padding-bottom: 5px;
+}
+
+.education ul li, .social ul li, .experience ul li, .skillsets ul li {
+  color: #384e77;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.social ul li a {
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3C6E71;
+}
+
+.social ul li a:hover {
+  color: #0687c7;
+}
+
+/*# sourceMappingURL=style.css.map */

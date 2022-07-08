@@ -1,0 +1,112 @@
+@use 'base';
+
+/* mixin formatting example below */
+/* @mixin sizing($property) {
+    padding: $property;
+    border-radius: $property;
+    margin: $property;
+} */
+@import "reset";
+
+@mixin light-border-design {
+    padding: 10px;
+    background-color: #026fa6;
+    border-bottom: 1px ridge #eae2b7;
+}
+
+@mixin heavy-border-design {
+    padding: 10px;
+    border-bottom: 7px dotted #eae2b7;
+    background-color:#0687c7;
+}
+
+.resume {
+    height: 100%;
+    margin: base.$basicmargin;
+    background: base.$resumecolor;
+    @extend %flexboxresume;
+    box-shadow: base.$basicboxshadow;
+
+    
+
+    .contactinfo {
+        /* margin: base.$navpadding; */
+        background: base.$backcolor;
+        padding: base.$basicpadding;
+        box-shadow: base.$basicboxshadow;
+        width: 30%;
+        
+        .contactpiece {
+            margin: 10px 0;
+            color: base.$buttoncolor;
+            font-size: base.$basicfontsize;
+
+            a {
+                text-decoration: base.$no-underline;
+                color: base.$buttoncolor;
+
+            }
+            
+            a:hover {
+                color: base.$hovercolor;
+            }
+            
+        
+        }
+
+        button {
+            border: base.$buttonstyle;
+            border-radius: base.$bradius;
+            background-color: base.$buttoncolor;
+            color: base.$bodycolor; 
+        }
+
+    }
+}
+.resume-body {
+    font-family: base.$resumebodyfont;
+    padding: base.$basicpadding;
+    color: base.$bodycolor;
+    width: 70%;
+    min-width: 100px;
+
+    
+    .name {
+        @include light-border-design;
+    }
+
+    .position {
+        @include heavy-border-design;
+    }
+
+    .profile, .education, .social, .experience, .skillsets {
+        margin: base.$basicmargin;
+    }
+    p {
+        font-size: base.$parafontsize;
+        font-family: base.$parafontstyle;
+    }
+    h3 {
+        border-bottom: base.$subheadingborder;
+        padding-bottom: 5px;
+    }
+}
+
+.education ul li, .social ul li, .experience ul li, .skillsets ul li {
+    color: base.$bodycolor;
+    font-family: base.$parafontstyle;
+}
+
+.social ul li a {
+    font-family: base.$parafontstyle;
+    font-size: base.$parafontsize;
+    text-decoration: base.$no-underline;
+    color: base.$bodycolor;
+   
+}
+
+
+
+.social ul li a:hover {
+    color: base.$hovercolor;
+}
